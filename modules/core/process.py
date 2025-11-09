@@ -17,7 +17,6 @@ def checkout():
         
         actual_price = product['price']
         
-        # VULNERABLE: Only checks if total is positive, not if it matches actual price
         if submitted_total > 0:
             # Process order with whatever amount client sent
             order_result = process_order(product_id, quantity, submitted_total)
